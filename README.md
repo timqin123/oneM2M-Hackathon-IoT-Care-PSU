@@ -239,7 +239,6 @@ python main.py
 ```
 After these steps, you should see a window on monitor attached to Jetson Nano. This window will show objects detect in live feed from webcam attached to robo car. If there is no person in camera view then robo car will start auto driving on track. If person steps in front of robo car then it will stop moving. When person moves out of camera view then car will start self-driving again.
 
-<img width="80%" alt="Screenshot 2023-06-04 at 2 25 47 PM" src="https://github.com/spg5958/oneM2M-Hackathon-GHULE-PSU/assets/135548795/f10cc278-c52a-4dda-921e-2647f58e08b6">
 
 ## Instructions for controlling Robotic arm from website using oneM2M (Mode 3)
 
