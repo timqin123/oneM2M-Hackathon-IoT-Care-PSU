@@ -252,7 +252,7 @@ And control robotic arm servos from the buttons.
 
 <br>
 
-## [Link](https://www.hackster.io/team-name-ghule-psu/remotely-operated-ai-enabled-robot-using-onem2m-50b9b5) to Hackster.io project page
+## [Link] https://www.hackster.io/team-name-iot-care-psu/remotely-operated-ai-enabled-robot-using-onem2m-50b9b5 to Hackster.io project page
 
 ## GitHub Repository Structure
 
