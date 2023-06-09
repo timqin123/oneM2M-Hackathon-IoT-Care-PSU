@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content = "IE=edge"
+    <meta name ="viewpoint" content ="width= device-width,inital-scale=1.0">
+  <title>oneM2m Hackathon</title>
+  <style>
+    body{
+        margin:0;
+        height:100vh;
+        background-color:#eee;
+
+    }
+    *{
+        border: 1px solid rgb(228, 216, 216);
+
+    }
+    .flex{
+        display: flex;
+    }
+    .whitebackground{
+        background-color: white;
+    }
+    .flex1{
+        flex:1
+    }
+    .column{
+        flex-direction: column;
+    }
+
+/* Styles for the heading */
+h1 {
+  text-align: center;
+}
+
+/* Styles for the buttons */
+button {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Styles for the button container */
+div {
+  text-align: center;
+}
+
+/* Styles for the form */
+form {
+  display: inline-block;
+}
+.car-container {
+            display: inline;
+            justify-content: center;
+            margin-top: 20px;
+            position: relative;
+            width: 20%;
+            height: 20%;
+        }
+
+        .server-container {
+            display: inline;
+            justify-content: center;
+            margin-top: 20px;
+            position: relative;
+            width: 20%;
+            height: 20%;
+        }
+  </style>
+
+
+</head>
+
+
+
+<body class="flex"
+    
+    <!--1st colone,title+video-->
+<div style="width:400px;
+
+class="whitebackground>
+<h1>2023 oneM2M International Hackathon Project (Team - GHULE PSU)</h1>
+<img src = "{{url_for('video')}}" width="50%">
+
+<form action="/" method="post">
+    <button name="homeBtn" type="submit">Home</button>
+</form>
+</div>
+
+
+
+<!-- right entire block-->
+<div class="flex1 flex column">
+    <!--top area-->
+    
+    
+    <div style="height:600px;" class="whitebackground">
+        <div class ="flex">
+            <div= style="flex" class ="flex column">
+        <div style="height: 100px; width: 100px;" class="whitebackground">
+            <form action="/servoALeft/" method="post">
+                <button style="width:300px;height: 30px;"name="servoALeftBtn" type="submit">ServoA left</button>
+            </form>
+    
+            <form action="/servoARight/" method="post">
+                <button style="width:300px;height: 30px;"name="servoARightBtn" type="submit">ServoA right</button>
+            </form>
+        </div>
+        <div style="height: 100px; width: 100px;" class="whitebackground">
+            <form action="/servoBUp/" method="post">
+                <button style="width:300px;height: 30px;"name="servoBUpBtn" type="submit">ServoB up</button>
+            </form>
+    
+            <form action="/servoBDown/" method="post">
+                <button style="width:300px;height: 30px;"name="servoBDownBtn" type="submit">ServoB down</button>
+            </form>    
+
+        </div>
+        <div style="height:100px; width: 100px;" class="whitebackground">
+            <form action="/servoCUp/" method="post">
+                <button style="width:300px;height: 30px;"name="servoCUpBtn" type="submit">ServoC up</button>
+            </form>
+    
+            <form action="/servoCDown/" method="post">
+                <button style="width:300px;height: 30px;"name="servoCDownBtn" type="submit">ServoC down</button>
+                </form>
+        </div>
+        <div style="height:100px; width: 100px;" class="whitebackground">
+            <form action="/servoDForward/" method="post">
+                <button style="width:300px;height: 30px;"name="servoDForwardBtn" type="submit">ServoD forward</button>
+            </form>
+    
+            <form action="/servoDBackward/" method="post">
+                <button style="width:300px;height: 30px;"name="servoDBackwardBtn" type="submit">ServoD backward</button>
+            </form>
+        </div>
+</div>
+        </div>
+        
+
+        
+        
+
+        
+    </div>
+    <!--main area-->
+    <div class="flex1 flex">
+        <!--left area-->
+    
+        <div= style ="flex:3;" class ="flex column">
+    <!--accelerate_forward_decelerate-->
+    <div class = "flex">
+        <div style="height:100px" class= "flex1 whitebackground">
+            <form action="/carAccelerate/" method="post">
+                <button style="width:110px;height: 100px;" name="carAccelerateBtn" type="submit">Car accelerate</button>
+             </form>
+        </div>
+    
+        <div style="height:100px" class= "flex1 whitebackground">
+            <form action="/carForward/" method="post">
+                <button style="width:110px;height: 100px;" name="carForwardBtn" type="submit">Car forward</button>
+            </form>
+        </div>
+    
+        <div style="height:100px" class= "flex1 whitebackground">
+            <form action="/carDecelerate/" method="post">
+                <button style="width:110px;height: 100px;" name="carDecelerateBtn" type="submit">Car decelerate</button>
+            </form>
+        </div>
+    </div>
+    <!--left_right-->
+    <div class = "flex column">
+        <div class ="flex">
+            <div style="height:100px" class= "flex1 whitebackground">
+                <form action="/carLeft/" method="post">
+                    <button style="width:110px;height: 100px;" name="carLeftBtn" type="submit">Car left</button>
+                 </form>
+            </div>
+            <div style="height:100px" class= "flex1 whitebackground"></div>
+            <div style="height:100px" class= "flex1 whitebackground">
+                <form action="/carRight/" method="post">
+                    <button style="width:110px;height: 100px;" name="carRightBtn" type="submit">Car right</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <!--back-->
+    <div class = "flex column">
+        <div class ="flex">
+            <div style="height:100px" class= "flex1 whitebackground"></div>
+            <div style="height:100px" class= "flex1 whitebackground">
+                <form action="/carBackward/" method="post">
+                    <button style="width:110px;height: 100px;" name="carBackwardBtn" type="submit">Car backward</button>
+                 </form>
+            </div>
+            <div style="height:100px" class= "flex1 whitebackground"></div>
+            
+        </div>
+    </div>
+    <!--stop-->
+    <div class = "flex column">
+        <div class ="flex">
+            
+            <div style="height:100px" class= "flex1 whitebackground">
+                <form action="/carStop/" method="post">
+                    <button style="width:350px;height: 100px;background-color: red;" name="carStopBtn" type="submit">Car stop</button>
+                </form>
+            </div>
+            
+            
+        </div>
+    <!--autodrive-->
+    <div class = "flex column">
+        <div class ="flex">
+            
+            <div style="height:100px" class= "flex1 whitebackground">
+                <form action="/carAutoDrive/" method="post">
+                    <button style="width:350px;height: 100px;"  name="carAutoDriveBtn" type="submit">Car auto drive</button>
+                </form>
+            </div>
+            
+            
+        </div>
+
+    </div>
+</div>
+        <!--right area-->
+        <div= style ="flex:1;" class = "flex column">
+            <div class = "flex"></div>
+
+    </div>
+    <div>
+    </div>
+    
+    <br>
+    
+</body>
+</html>
