@@ -1,6 +1,6 @@
 # Remotely Operated AI enabled Robot Using oneM2M
 
-<img src="https://github.com/spg5958/oneM2M-Hackathon-GHULE-PSU/assets/135548795/e71724eb-a760-4c3b-9a4f-d230ed373b24" width=40% height=40%>
+<img src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/a3fd6fcf-7d3b-47f7-b8c0-b33606d5790d" width=40% height=40%>
 
 ## Introduction
 Elderly people or people with disabilities find it difficult to lift and carry objects. It becomes difficult when there is no one around to help them in their daily chores. Making multiple trips back and forth say from kitchen to bedroom can cause a lot of physical pain. In this project. We want to develop a robot for elderly and physically disabled people that can lift and carry objects for them. We aim to build a self-navigating robot that can carry objects to desired destination and also has functionality to be driven manually from remote place. This robot will use AI & IoT technologies for navigation (automatic and manual). IoT technology such as oneM2M will be used to drive robot manually from remote place by a person who can be anywhere in the world.
