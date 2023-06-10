@@ -102,7 +102,7 @@ Finally on third layer, attach USB webcam to RPi4, high current batteries to Rob
 **2) Install Robotic Arm software:** Detailed instruction for downloading and installing the relevant code program to control the robotic arm cab be found [here](https://www.adeept.com/learn/tutorial-288.html). After installing robotic arm software clone hackathon project repo in RPi4.
 
 ```
-git clone https://github.com/GHULEPSU/oneM2M-Hackathon-GHULE-PSU.git
+git clone https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU
 ```
 
 **3) Setup Jetson Nano:** Please follow the instructions given [here](https://www.waveshare.com/wiki/JETSON-NANO-DEV-KIT) for setting up Jetson Nano. Then clone jetson-inference and hackathon project repositories.
@@ -110,7 +110,7 @@ git clone https://github.com/GHULEPSU/oneM2M-Hackathon-GHULE-PSU.git
 ```
 git clone --recursive https://github.com/dusty-nv/jetson-inference
 cd jetson-inference/data
-git clone https://github.com/GHULEPSU/oneM2M-Hackathon-GHULE-PSU.git
+git clone https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU
 ```
 
 It is important to clone hackathon repo in "jetson-inference/data" because we are using docker for running our neural network. Anything we put in "jetson-inference/data" is accessible inside container. You can start docker container for object detection using
@@ -127,7 +127,7 @@ You can have a look at [this](https://www.hackster.io/compeng-psu/remotely-opera
 
 Then log into ec2 and clone hackathon project repo.
 ```
-git clone https://github.com/GHULEPSU/oneM2M-Hackathon-GHULE-PSU.git
+git clone https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU
 ```
 
 **5) ACME installation:** Login to ec2 instance created in the previous step and install ACME server using the instructions given [here](https://github.com/ankraft/ACME-oneM2M-CSE/blob/master/docs/Installation.md).
@@ -142,7 +142,7 @@ Before we can start operating our robot from website we need to configure IP add
 
 1) First, Log into Raspberry Pi and go at following location in hackathon project repo. Open "config.py" file via any text editor
 ```
-cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-GHULE-PSU/src/acmeLib
+cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-IoT-Care-PSU/src/acmeLib
 nano confi.py
 ```
 
@@ -153,7 +153,7 @@ http://<public-ip-of-ec2-instance>:8080
 
 2) Then goto following location in Raspberry Pi & open "startCamera.sh" and change ip address of RTSP server to the public ip of ec2 instance
 ```
-cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-GHULE-PSU/src/
+cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-IoT-Care-PSU/src/
 nano startCamera.sh
 ```
 3) Then open "detectnet.py" and enter public ip of ec2 instance inside the videoSource function ("input = videoSource(....)")
@@ -179,23 +179,22 @@ cd <path-to-mediamtx-installation>/mediamtx
 4) Login into Raspberry Pi. <br>
 5) Start webcam streaming. It is important to start webcam streaming before starting flask server otherwise you will not see stream on website.
 ```
-cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-GHULE-PSU/src
+cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-IoT-Care-PSU/src
 ./startCamera.sh
 ```
 6) Start Flask server on ec2 instance (log back into ec2 instance and start flask server). <br>
 ```
-cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-GHULE-PSU/src/flaskSite
+cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-IoT-Care-PSU/src/flaskSite
 flask run --host=0.0.0.0
 ```
 7) Finally, start main program on Raspberry Pi.
 ```
-cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-GHULE-PSU/src
+cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-IoT-Care-PSU/src
 python main.py
 ```
 After these steps open web browser and goto
 ```
-http://<public-ip-of-ec2-instace>:5000<img width="1104" alt="Screenshot 2023-06-04 at 2 23 37 PM" src="https://github.com/spg5958/oneM2M-Hackathon-GHULE-PSU/assets/135548795/f8f7b0e8-786e-47aa-b4d6-93f1ee5e9210">
-
+http://<public-ip-of-ec2-instace>:5000
 ```
 And you should see following webpage. On this webpage you can see live feed from webcam and buttons to control robo car!
 
@@ -248,13 +247,13 @@ Start robo car in either mode 1 or mode 2 and goto desired location to pick up i
 ```
 http://<public-ip-of-ec2-instace>:5000
 ```
-And control robotic arm servos from the buttons.
+And control robotic arm servos from the buttons!
 
 <img width="80%" alt="Website Robotic Arm" src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/54c51375-fa93-460b-8cf0-7a9e2247e75a">
 
 <br>
 
-## [Link] (https://www.hackster.io/compeng-psu/remotely-operated-ai-enabled-robot-using-onem2m-50b9b5) to Hackster.io project page
+## [Link](https://www.hackster.io/compeng-psu/remotely-operated-ai-enabled-robot-using-onem2m-50b9b5) to Hackster.io project page
 
 ## GitHub Repository Structure
 
