@@ -215,7 +215,7 @@ python3 -m acme --headless
 ```
 You can access ACME webui at following address <br>
 ```
-http://<public-ip-of-ec2>:8080/webui/`
+http://<public-ip-of-ec2>:8080/webui/
 ```
 3) Start RTSP server. <br>
 ```
@@ -248,6 +248,7 @@ python main.py
 ```
 After these steps, you should see a window on monitor attached to Jetson Nano. This window will show objects detect in live feed from webcam attached to robo car. If there is no person in camera view then robo car will start auto driving on track. If person steps in front of robo car then it will stop moving. When person moves out of camera view then car will start self-driving again.
 
+<img width="80%" alt="AI" src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/c9c6ba79-641e-4d84-827e-47f3b37dc502">
 
 ## Instructions for controlling Robotic arm from website using oneM2M (Mode 3)
 
