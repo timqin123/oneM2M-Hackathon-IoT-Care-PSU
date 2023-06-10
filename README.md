@@ -14,7 +14,7 @@ oneM2M addresses these issues. oneM2M standard is accessible, interoperable,  sc
 oneM2M defines an architectural framework based on a middleware  technology that sits in the horizontal layer between IoT applications  and a lower layer of communications networks and connected devices. The middleware layer provides a rich set of functions that are needed to manage end-to-end IoT systems. oneM2M takes the form of a middleware service layer consisting of a suite of common service functions (CSFs). oneM2M's common service functions (CSFs) are exposed to applications and to IoT devices via RESTful APIs. A oneM2M service layer and/or applications can reside in field devices  and sensors, on gateways and in back-end or cloud applications. This  supports cooperative intelligence in distributed IoT systems. The oneM2M functional architecture comprises of (1) Application Entity (AE), (2) Common Services Entity (CSE), and (3) Underlying Network Services Entity (NSE).<br>
 
 <img src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/a04db0c5-6912-42ec-b6f8-9b6b41c88ea0" width=80%> <br>
-*Ref - https://www.onem2m.org/using-onem2m/devices-examples*
+(Source - https://www.onem2m.org/using-onem2m/devices-examples)
 
 List of different functions available in oneM2M Service Layer (Source - https://www.onem2m.org/using-onem2m/developers/basics) <br>
 You can learn more about oneM2M standards and its benefit at: https://www.onem2m.org/using-onem2m/what-is-onem2m<br>
@@ -217,12 +217,12 @@ cd <path-to-mediamtx-installation>/mediamtx
 4) Login into Raspberry Pi. <br>
 5) Start webcam streaming. It is important to start webcam streaming before starting flask server otherwise you will not see stream on the website.
 ```
-cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-GHULE-PSU/src
+cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-IoT-Care-PSU/src
 ./startCamera.sh
 ```
 6) Start Flask server on ec2 instance (log back into ec2 instance and start flask server). <br>
 ```
-cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-GHULE-PSU/src/flaskSite
+cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-IoT-Care-PSU/src/flaskSite
 flask run --host=0.0.0.0
 ```
 7) Start Jetson Nano and run object detection program.
@@ -230,12 +230,12 @@ flask run --host=0.0.0.0
 cd <path-to-jetson-inference-repo>/jetson-inference/
 ./docker/run.sh
 pip install ipython
-cd jetson-inference/data/oneM2M-Hackathon-GHULE-PSU
+cd jetson-inference/data/oneM2M-Hackathon-IoT-Care-PSU
 python3 detectnet.py
 ```
 8) Finally, start main program on Raspberry Pi. <br>
 ```
-cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-GHULE-PSU/src
+cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-IoT-Care-PSU/src
 python main.py
 ```
 After these steps, you should see a window on monitor attached to Jetson Nano. This window will show objects detect in live feed from webcam attached to robo car. If there is no person in camera view then robo car will start auto driving on track. If person steps in front of robo car then it will stop moving. When person moves out of camera view then car will start self-driving again.
