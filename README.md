@@ -1,4 +1,4 @@
-# Remotely Operated AI enabled Robot Using oneM2M
+# Remotely Operated AI Enabled Robot Using oneM2M
 
 <img src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/a3fd6fcf-7d3b-47f7-b8c0-b33606d5790d" width=40% height=40%>
 
