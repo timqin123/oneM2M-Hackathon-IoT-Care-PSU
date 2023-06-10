@@ -28,7 +28,7 @@ You can learn more about oneM2M architecture at: https://www.onem2m.org/using-on
 
 ## System Architecture
 
-<img src="https://github.com/spg5958/oneM2M-Hackathon-GHULE-PSU/assets/135548795/81465055-9d41-408c-a809-2fc88551f9cd" width=80%>
+<img src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/d6351c35-a909-4c4d-a3a4-c8076789a67e" width=80%>
 <br><br>
 We are using ACME oneM2M CSE for all communication between IoT devices and website. Live streaming from RiP4 (raspberry pi) webcam is achieved through MEDIAMTX RTSP server. Hackthon website for controlling robo car and robotic arm is setup using Flask. Jetson nano is used for object detection while self-driving. All servers are hosted on AWS. First, raspberry pi creates roboCar AE in ACME server and a container inside roboCar AE. The whole process starts by capturing live feed from webcam attached to raspberry pi. Raspberry pi sends live feed from webcam to MEDIAMTX RTSP server. Jetson nano then pulls live stream from RTSP server for object detection. Simultaneously flask server pulls live stream from RTSP server and displays it on website. When jetson nano detects person in live feed then it creates a contentInstance inside container (which is inside roboCar AE) on ACME server with content = "carStop". Robo car pulls last created contentInstance from ACME server every 0.1 sec (if it exists) and reads "content" field from contentInstance. If content is "carStop" then robo car stops until there no one in front of car. When there is no person in front of car then jetson nano creates new contentInstance with content = "carAutoDrive". Robo car pulls that command and starts self-driving on the track. After pulling latest contentInstance robo car deletes that instance from ACME this way it does not keep pulling same contentInstance over and over again. When any button is pressed on the website it also creates a new contentInstance with content=<command> and robo car again pulls that contentInstance to execute that command. Based on our deliverables our robot has three modes of control/operation which includes two modes of driving and one mode of robotic arm control:<br>
 
@@ -41,8 +41,9 @@ In this project, we are using artificial intelligence to detect person in front 
 
 Object detection is a computer technology related to computer vision and image processing that deals with detecting instances of semantic objects of a certain class (such as humans, buildings, or cars) in digital images and videos. In project, we are using "SSD-Mobilenet-v2" trained on 91-class MS COCO dataset because it achieves realtime inferencing performance on Jetson Nano. The SSD (Single Shot Detector) architecture is a single convolution network that learns to predict bounding box locations and classify these locations in one pass. Hence, SSD can be trained end-to-end. The SSD network consists of base architecture (MobileNet in this case) followed by several convolution layers.
 
-<img src="https://github.com/spg5958/oneM2M-Hackathon-GHULE-PSU/assets/122632209/021e9193-eada-4019-84ee-b78bdfd2e1e3" width=80%>
+<img src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/d2afdd39-c5b7-49b2-8a55-05516244bb3f" width=80%>
 <br>
+
 Some examples of SSD-Mobilenet-v2 successfully detecting complex objects from images (source - https://github.com/dusty-nv/jetson-inference/blob/master/docs/detectnet-console-2.md)
 
 ## Edge Computing with Jetson Nano
