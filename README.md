@@ -48,6 +48,8 @@ Some examples of SSD-Mobilenet-v2 successfully detecting complex objects from im
 
 ## Edge Computing with Jetson Nano
 
+<img src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/0413b168-430b-42f5-a2f5-c970ec27cfb6" width=70%>
+
 In this project we are using Jetson Nano Developer Kit for implementing object detection. There are many cloud based options available today in the market for AI. However, these option are not suitable for our use case because of following limitations: <br> 
 
 * We generally need to rent a GPU which are not cheap & can add a significant cost to our device.
