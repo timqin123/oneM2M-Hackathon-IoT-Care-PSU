@@ -48,7 +48,7 @@ Some examples of SSD-Mobilenet-v2 successfully detecting complex objects from im
 
 ## Edge Computing with Jetson Nano
 
-<img src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/0413b168-430b-42f5-a2f5-c970ec27cfb6" width=70%>
+<img src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/0413b168-430b-42f5-a2f5-c970ec27cfb6" width=50%>
 
 In this project we are using Jetson Nano Developer Kit for implementing object detection. There are many cloud based options available today in the market for AI. However, these option are not suitable for our use case because of following limitations: <br> 
 
@@ -119,11 +119,11 @@ It is important to clone hackathon repo in "jetson-inference/data" because we ar
 docker/run.sh
 ```
 
-You can have a look at this page for more information on launching docker container.
+You can have a look at [this](https://www.hackster.io/compeng-psu/remotely-operated-ai-enabled-robot-using-onem2m-50b9b5) page for more information on launching docker container.
 
 **4) Create AWS EC2 instance:** For creating AWS EC2 instance please have a look at [this](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html) tutorial. After creating ec2 instance open following ports by editing Inbound rules in the security groups attached to ec2 instance.
 
-<img width="80%" alt="AWS open ports" src="https://github.com/spg5958/oneM2M-Hackathon-GHULE-PSU/assets/135548795/488c9617-7658-4914-8b9f-c2ea29d94b69">
+<img width="80%" alt="AWS open ports" src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/438c59c8-5a0f-49b4-a023-35ac712ddd35">
 
 Then log into ec2 and clone hackathon project repo.
 ```
