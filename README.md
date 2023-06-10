@@ -160,6 +160,12 @@ nano startCamera.sh
 
 4) Then log into aws ec2 instance. Goto ACME repo and update "networkInterface" field to 0.0.0.0 & "cseHost" field to public ip of ec2 instance
 
+5) Finally, goto following location in ec2 instance. Open "app.py" & ip address of RTSP server to the public ip of ec2 instance
+
+```
+cd <path-to-hackathon-project-repo>/oneM2M-Hackathon-IoT-Care-PSU/src/flaskSite
+```
+
 ## Instructions for manual driving from website using oneM2M  (Mode 1)
 1) Log into ec2 instance. <br>
 2) Start ACME server. <br>
