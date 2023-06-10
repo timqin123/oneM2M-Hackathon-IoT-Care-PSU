@@ -199,8 +199,7 @@ http://<public-ip-of-ec2-instace>:5000<img width="1104" alt="Screenshot 2023-06-
 ```
 And you should see following webpage. On this webpage you can see live feed from webcam and buttons to control robo car!
 
-<img width="80%" alt="Website Car" src="https://github.com/spg5958/oneM2M-Hackathon-GHULE-PSU/assets/135548795/cf7a2ecc-62b0-4931-ba36-4e64e4d83b85">
-
+<img width="80%" alt="Website Car" src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/2c57b08a-6b3b-4f7e-98f2-58671f930043">
 
 ## Instructions for AI enabled self-driving using oneM2M (Mode 2)
 1) Log into ec2 instance. <br>
@@ -251,11 +250,11 @@ http://<public-ip-of-ec2-instace>:5000
 ```
 And control robotic arm servos from the buttons.
 
-<img width="80%" alt="Website Robotic Arm" src="https://github.com/spg5958/oneM2M-Hackathon-GHULE-PSU/assets/135548795/b677ec06-d8be-48fc-9e3c-54e2a0de543e">
+<img width="80%" alt="Website Robotic Arm" src="https://github.com/timqin123/oneM2M-Hackathon-IoT-Care-PSU/assets/135455273/54c51375-fa93-460b-8cf0-7a9e2247e75a">
 
 <br>
 
-## [Link] https://www.hackster.io/team-name-iot-care-psu/remotely-operated-ai-enabled-robot-using-onem2m-50b9b5 to Hackster.io project page
+## [Link] (https://www.hackster.io/compeng-psu/remotely-operated-ai-enabled-robot-using-onem2m-50b9b5) to Hackster.io project page
 
 ## GitHub Repository Structure
 
