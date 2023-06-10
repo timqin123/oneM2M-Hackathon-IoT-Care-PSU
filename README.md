@@ -119,7 +119,7 @@ It is important to clone hackathon repo in "jetson-inference/data" because we ar
 docker/run.sh
 ```
 
-You can have a look at [this](https://www.hackster.io/compeng-psu/remotely-operated-ai-enabled-robot-using-onem2m-50b9b5) page for more information on launching docker container.
+You can have a look at [this](https://github.com/dusty-nv/jetson-inference/blob/master/docs/aux-docker.md) page for more information on launching docker container.
 
 **4) Create AWS EC2 instance:** For creating AWS EC2 instance please have a look at [this](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html) tutorial. After creating ec2 instance open following ports by editing Inbound rules in the security groups attached to ec2 instance.
 
